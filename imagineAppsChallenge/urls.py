@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from apiConsumerApp.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('createcontracts/',CocoaContractCreationView.as_view()),
+    path('list/',CocoaContractListView.as_view()),
+    
 ]

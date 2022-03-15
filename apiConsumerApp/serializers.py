@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from apiConsumerApp.models import CocoaContracts
+from apiConsumerApp.models import CocoaContract
 
 
-class CustomerDataSerializer(serializers.ModelSerializer):
+class CocoaContractSerializer(serializers.ModelSerializer):
     """
     A simple serializer for our CocoaContracts model
     """
@@ -10,5 +10,5 @@ class CustomerDataSerializer(serializers.ModelSerializer):
     data = serializers.JSONField()
 
     class Meta:
-        model = CocoaContracts
+        model = CocoaContract
         fields = ('id', 'data')
